@@ -7,7 +7,7 @@ body{
 .stw{
     width: 100%;
     max-width: 600px;
-    background-image: url(images/bg.jpeg);
+    background-image: url(bg.jpeg);
     background-size: cover;
     background-position: center;
     text-align: center;
