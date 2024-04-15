@@ -10,56 +10,13 @@
     <div class="stw">
         <h1 id="displayTime">00:00:00</h1>
         <div class="btn">
-            <img onclick="watchEnd()" src="end.png" alt="">
-            <img onclick="watchStart()" src="start.png" alt="">
-            <img onclick="watchReset()" src="restart.png" alt="">
+            <img onclick="watchEnd()" src="images/end.png" alt="">
+            <img onclick="watchStart()" src="images/start.png" alt="">
+            <img onclick="watchReset()" src="images/restart.png" alt="">
         </div>
     </div>
 
 
-    <script>
-
-        let [sec,min,hours]=[0,0,0];
-        let displayTime=document.getElementById('displayTime');
-        let timer= null;
-
-        function stopwatch(){
-            sec++;
-            if(sec==60){
-                sec=0;
-                min++;
-                if(min==60){
-                    min=0;
-                    hours++;
-                }
-            }
-
-            let h= hours<10 ? "0"+hours : hours;
-            let m= min<10 ? "0"+min : min;
-            let s= sec<10 ? "0"+sec : sec;
-
-            displayTime.innerHTML= h + ":" + m + ":" + s ;
-        }
-
-        function watchStart(){
-            if(timer!== null){
-                clearInterval(timer);
-            }
-            timer=setInterval(stopwatch, 1000);
-        }
-
-        function watchEnd(){
-            clearInterval(timer);
-        }
-
-        function watchReset(){
-            clearInterval(timer);
-            [sec,min,hours]= [0,0,0];
-            displayTime.innerHTML= "00:00:00";
-
-        }
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
